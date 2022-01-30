@@ -1,14 +1,545 @@
-<DOCTYPE html>
-  
-<html>
-  
-  <head>
-    <meta charset="utf-8">
-    <title>MY FIRST EVER PROJECT ON GITHUB</title>
-  </head>
-  
-  <body>
-    <h1> HOW DOES IT LOOK ? </h1>
-  </body>
-  
-</html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+		<title>Syllabus Planning</title>
+		
+		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Comforter&display=swap" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Comforter&family=Genos&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Comforter&family=Genos&family=Grechen+Fuemen&display=swap" rel="stylesheet">
+		
+		<style>
+			h2 {
+				color: #d82a55 !important;
+				font-size: 60px;
+				font-family: Lobster, sans-serif;
+				margin-bottom: -2px;
+			}
+			h4 {
+				font-size: 30px;
+				color: #d82a55;;
+				padding-top: 0px;
+				margin-bottom: -2px;
+				margin-top: 15px;
+				text-align: center;
+			}
+			h5 {
+				color: #600337;
+				font-size: 30px;
+				font-family: Genos, sans-serif;
+				padding-bottom: 15px;
+				/* text-decoration: underline; OR line-through */
+				margin: 0px 0px 3px -2px;
+			}
+			h6 {
+				font-size: 20px;
+				color: #d82a82;
+				font-family: Lobster, sans-serif;
+				padding: 5px;
+				margin: 4px 0px 2px -2px;
+				padding-top: 4px;
+			}
+			.gray-text {
+				color: gray;
+			}
+			.content {
+				color: gray !important;
+			}
+			#contP, #contC, #contM {
+				margin: 5px;
+				font-size: 18px;
+				color: gray !important;
+			}
+			footer {
+				font-family: Genos;
+				color: pink;
+				font-size: 20px;
+				background-color: #d82a82;
+				padding: 20px;
+				border-radius: 5px;
+				font-weight: bold; /* italic */
+			}
+			a {
+				color: pink;
+			}
+			form {
+				font-size: 20px;
+				font-family: Genos, sans-serif;
+			}
+			h3 {
+				font-size: 30px;
+				color: #d82a82;
+				padding-left: 10px;
+				font-family: Genos, sans-serif;
+			}
+			#authorImg {
+				width: 80px;
+				border-radius: 50%;
+				border: 5px solid silver;
+				padding: 5px;
+			}
+			#authorSign {
+				color: #d82a82;
+				font-family: Genos, monospace;
+				font-size: 20px;
+				width: 220px;
+				padding-left: 13px;
+				background-color: pink;
+				border-radius: 5px;
+			}
+			button {
+				margin: 10px;
+				color: #d82a82;
+				font-family: Lobster, sans-serif;
+				font-size: 16px;
+				background-color: pink;
+				border-radius: 5px;
+				border-color: pink;
+			}
+			p, li {
+				font-size: 18px;
+				padding-bottom: 5px;
+			}
+			[type='radio'] {
+				padding: 0px 20px 0px 5px;
+			}
+			#email {
+				text-align: center;
+				border-color: pink;
+				border-radius: 5px;
+				padding: 5px;
+				color: #600337;
+				border-width: 3px;
+				font-family: Lobster, sans-serif;
+			}
+			
+			:root {
+				/* variables start */
+					--penguin-skin: #d82a82;
+					--penguin-belly: #f7e0ef;
+					--penguin-beak: #d82a82;
+					--penguin-size: 200px;
+				/* variables end */
+			}
+			
+			@media (min-width: 700px) {
+				:root {
+					--penguin-size: 300px;
+				}
+			}
+			
+			.penguin {
+				position: relative;
+				margin: auto;
+				display: block;
+				margin-left: 0.002%;
+				margin-top: 5%;
+				width: var(--penguin-size);
+				height: var(--penguin-size);
+			}
+			.penguin-top {
+				top: 10%;
+				left: 25%;
+				background: var(--penguin-skin, gray);
+				width: 50%;
+				height: 45%;
+				border-radius: 70% 70% 60% 60%;
+			}
+			.penguin-bottom {
+				top: 40%;
+				left: 23.5%;
+				background: var(--penguin-skin, gray);
+				width: 53%;
+				height: 45%;
+				border-radius: 70% 70% 100% 100%;
+			}
+			.right-hand {
+				top: 0%;
+				left: -5%;
+				background: var(--penguin-skin, gray);
+				width: 30%;
+				height: 60%;
+				border-radius: 30% 30% 120% 30%;
+				transform: rotate(45deg);
+				z-index: -1;
+			}
+			.left-hand {
+				top: 0%;
+				left: 75%;
+				background: var(--penguin-skin, gray);
+				width: 30%;
+				height: 60%;
+				border-radius: 30% 30% 30% 120%;
+				transform: rotate(-45deg);
+				z-index: -1;
+			}
+			.right-cheek {
+				top: 15%;
+				left: 35%;
+				background: var(--penguin-belly, white);
+				width: 60%;
+				height: 70%;
+				border-radius: 70% 70% 60% 60%;
+			}
+			.left-cheek {
+				top: 15%;
+				left: 5%;
+				background: var(--penguin-belly, white);
+				width: 60%;
+				height: 70%;
+				border-radius: 70% 70% 60% 60%;
+			}
+			.belly {
+				top: 60%;
+				left: 2.5%;
+				background: var(--penguin-belly, white);
+				width: 95%;
+				height: 100%;
+				border-radius: 120% 120% 100% 100%;
+			}
+			.right-feet {
+				top: 85%;
+				left: 60%;
+				background: var(--penguin-beak, orange);
+				width: 15%;
+				height: 30%;
+				border-radius: 50% 50% 50% 50%;
+				transform: rotate(-80deg);
+				z-index: -2222;
+			}
+			.left-feet {
+				top: 85%;
+				left: 25%;
+				background: var(--penguin-beak, orange);
+				width: 15%;
+				height: 30%;
+				border-radius: 50% 50% 50% 50%;
+				transform: rotate(80deg);
+				z-index: -2222;
+			}
+			.right-eye {
+				top: 45%;
+				left: 60%;
+				background: black;
+				width: 15%;
+				height: 17%;
+				border-radius: 50%;
+			}
+			.left-eye {
+				top: 45%;
+				left: 25%;
+				background: black;
+				width: 15%;
+				height: 17%;
+				border-radius: 50%;
+			}
+			.sparkle {
+				top: 25%;
+				left: 15%;
+				background: white;
+				width: 35%;
+				height: 35%;
+				border-radius: 50%;
+			}
+			.blush-right {
+				top: 65%;
+				left: 15%;
+				background: pink;
+				width: 15%;
+				height: 10%;
+				border-radius: 50%;
+			}
+			.blush-left {
+				top: 65%;
+				left: 70%;
+				background: pink;
+				width: 15%;
+				height: 10%;
+				border-radius: 50%;
+			}
+			.beak-top {
+				top: 60%;
+				left: 40%;
+				background: var(--penguin-beak, orange);
+				width: 20%;
+				height: 10%;
+				border-radius: 50%;
+			}
+			.beak-bottom {
+				top: 65%;
+				left: 42%;
+				background: var(--penguin-beak, orange);
+				width: 16%;
+				height: 10%;
+				border-radius: 50%;
+			}
+			.penguin * {
+				position: absolute;
+			}
+			
+			#cont, #legend {
+				border: 1px solid pink;
+				margin-top: 20px;
+				padding: 20px;
+				padding-top: 0.1px;
+				border-radius: 10px;
+			}
+			#cont {
+				width: 200px;
+			}
+			#legend {
+				width: 600px;
+			}
+			#back-to-top {
+				color: pink;
+				font-size: 40px;
+				background-color: #d82a82;
+				border: 3px solid #d82a82;
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+				margin-left: 5px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	
+	<body>
+		<header id="header">
+			<h1 style="color: #d82a55; font-family: Comforter; font-size: 100px; background-color: pink; padding: 10px; border-radius: 10px; text-align: center;"><u>My Syllabus Planning</u> 🧐</h1>
+			
+			<p>Here is my progress and syllabus planning for <strong>JEE Main and Advanced 2023</strong>. And I am trying to code it as my new website ... This is simply because I can't find a topic to start with.</p>
+		</header>
+		
+		<div class="penguin">
+		  <div class="penguin-bottom">
+			<div class="right-hand"></div>
+			<div class="left-hand"></div>
+			<div class="right-feet"></div>
+			<div class="left-feet"></div>
+		  </div>
+		  <div class="penguin-top">
+			<div class="right-cheek"></div>
+			<div class="left-cheek"></div>
+			<div class="belly"></div>
+			<div class="right-eye">
+			  <div class="sparkle"></div>
+			</div>
+			<div class="left-eye">
+			  <div class="sparkle"></div>
+			</div>
+			<div class="blush-right"></div>
+			<div class="blush-left"></div>
+			<div class="beak-top"></div>
+			<div class="beak-bottom"></div>
+		  </div>
+		</div>
+		
+		<div>
+			<div id="cont">
+				<h4>Content</h4> <!-- The content of the page. -->
+				<ol class="gray-text">
+					<li id="contP"><a href = "#physics" class="content"><strong>Physics</strong></a> 🔭</li>
+					<li id="contC"><a href = "#chemistry" class="content"><strong>Chemistry</strong></a>  ⚗️</li>
+					<li id="contM"><a href = "#maths" class="content"><strong>Mathematics</strong></a>  ♾️</li>
+				</ol>
+			</div>
+			<div id="legend">
+				<h4>Legend</h4> <!-- Legend showing state of topics for each subject. -->
+				<ul class="gray-text">
+					<li><strong>Firm Grasp 😁</strong> → These are the topics with which I am comfortable.</li>
+					<li><strong>Know It 😐</strong> → I have studied these topics as well but still I develop my skills in them.</li>
+					<li><strong>Not Touched 😵</strong> → As the name suggests, these are untouched topics; I have not started studying them yet.</li>
+				</ul>
+			</div>
+		</div>
+		
+		<main>
+			<div>
+				<h2 id = "physics">PHYSICS 🔭</h2>
+				<h3>Firm Grasp 😁</h3>
+				<ol>
+					<li>Units and Measurements</li>
+					<li>Basic Vectors</li>
+					<li>Kinematics</li>
+					<li>Newton's Laws of Motion</li>
+					<li>Friction</li>
+					<li>Circular Motion</li>
+					<li>Calorimetry</li>
+				</ol>
+				
+				<h3>Know It 😐</h3>
+				<ol>
+					<li>Work, Energy and Power ✍️</li>
+					<li>Centre of Mass, Linear Momentum & Collision</li>
+					<li>Rotational Mechanics</li>
+					<li>Thermal Expansion</li>
+					<li>Heat Transfer ✍️</li>
+					<li>Mechanical Properties of Solids ✍️</li>
+				</ol>
+				
+				<h3>Not Touched 😵</h3>
+				<ol>
+					<li>Gravitation</li>
+					<li>Fluid Mechanics</li>
+					<li>Thermal Properties of Matter</li>
+					<li>Thermodynamics</li>
+					<li>Kinetic Theory</li>
+					<li>Simple Harmonic Motion</li>
+					<li>Wave Mechanics</li>
+					<li>Working of Measuring Devices</li>
+				</ol>
+			</div>
+			
+			<div>
+				<h2 id = "chemistry">CHEMISTRY ⚗️</h2>
+				<h3>Firm Grasp 😁</h3>
+				<ol>
+					<li>Mole Concept & Stoichiometry</li>
+					<li>Structure of Atom</li>
+					<li>IUPAC Nomenclature of Organic Compounds</li>
+					<li>General Organic Chemistry</li>
+				</ol>
+				
+				<h3>Know It 😐</h3>
+				<ol>
+					<li>Classification of Elements & Periodicity in Properties</li>
+					<li>Gaseous State</li>
+					<li>Chemical Bonding & Molecular Structure</li>
+					<li>Redox Reactions</li>
+					<li>Hydrogen</li>
+					<li>Isomerism ✍️</li>
+					<li>Chemical Equilibrium ✍️</li>
+				</ol>
+				
+				<h3>Not Touched 😵</h3>
+				<ol>
+					<li>Thermodynamics</li>
+					<li>Thermochemistry</li>
+					<li>The s-block Elements</li>
+					<li>The p-block Elements</li>
+					<li>Hydrocarbons</li>
+					<li>Environmental Chemistry</li>
+				</ol>
+			</div>
+			
+			<div>
+				<h2 id = "maths">MATHEMATICS ♾️</h2>
+				<h3>Firm Grasp 😁</h3>
+				<ol>
+					<li>Set Theory</li>
+					<li>Basic Relations & Functions</li>
+					<li>Linear Inequalities</li>
+					<li>Straight Lines</li>
+					<li>Circle</li>
+					<li>Basic Limits & Derivatives</li>
+				</ol>
+				
+				<h3>Know It 😐</h3>
+				<ol>
+					<li>Logarithms</li>
+					<li>Trigonometric Ratios & Identities</li>
+					<li>Trigonometric Equations</li>
+					<li>Complex Numbers</li>
+					<li>Quadratic Equations & Expressions</li>
+					<li>Permutations & Combinations ✍️</li>
+					<li>Binomial Theorem ✍️</li>
+					<li>Sequences and Series</li>
+					<li>Solution of Triangle</li>
+				</ol>
+				
+				<h3>Not Touched 😵</h3>
+				<ol>
+					<li>Ellipse</li>
+					<li>Parabola</li>
+					<li>Hyperbola</li>
+					<li>Three Dimensional Geometry</li>
+					<li>Mathematical Reasoning</li>
+					<li>Principle of Mathematical Induction</li>
+					<li>Statistics</li>
+					<li>Probability</li>
+				</ol>
+			</div>
+		</main>
+		
+		<hr>
+		
+		<div>
+			<h5>Learn more about me:</h5>
+			<img src = "https://sn3301files.storage.live.com/y4miCbfoRUSQfTEsR4BqfJlzKInf_hbuc1WDQF_PbyQ05yei1PBoQ7FLweWswAtDMxgcEzZoPb0rjIOqv3TUKJl9ktY3kxPpR0Jd0L7mmAwh-_YnreosmhGyE7f6qIClcw96dL-5FgSKk3NNeFVn9HJ3fovE8Arhyn-NW-nOj7nDFT3-_D-0u8XaIINTlYhj5Vt?width=802&height=797&cropmode=none" id = "authorImg"> <div id = "authorSign">Author: <strong>@SwagatamHeroz</strong></div>
+			<p>This links to <a href = "https://www.freecodecamp.org/swagatam_heroz" target = "_blank"><em>my profile at freeCodeCamp.org</em></a>.</p>
+			<p>This links to <a href = "#"><em>my Khan Academy profile</em></a>.</p>
+		</div>
+		
+		<hr>
+		
+		<div>
+			<h5>For the readers:</h5>
+			
+			<div>
+				<h6>How do you like this page?</h6>
+				<form action = "#">
+					<label for="great"> 
+						<input id="great" value="great" type="radio" name="rating">Great😎 
+					</label>
+					<label for="good">
+						<input id="good" value="good" type="radio" name="rating" checked>Good😐
+					</label>
+					<label for="yuck">
+						<input id="yuck" value="yuck" type="radio" name="rating">Yuck😵‍💫
+					</label><br>
+					
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+			
+			<div>
+				<h6>Which portions of the page need improvement?</h6>
+				<form action = "#">
+					<label for="headings"> 
+						<input id="headings" value="headings" type="checkbox" name="improvement">The headings 
+					</label>
+					<label for="readability">
+						<input id="readability" value="readability" type="checkbox" name="improvement">Readability of the article
+					</label>
+					<label for="design">
+						<input id="design" value="design" type="checkbox" name="improvement">Overall design of the page
+					</label>
+					<label for="layout">
+						<input id="layout" value="layout" type="checkbox" name="improvement">Layout of the page
+					</label><br>
+					
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+			
+			<div>
+				<h6>Sign up now to receive updates at your email's inbox! 📫</h6>
+				<form action = "#">
+					I would like to receive updates on:
+					<label for="posts"> 
+						<input id="posts" value="posts" type="checkbox" name="updates" checked>New posts 
+					</label>
+					<label for="offers"> 
+						<input id="offers" value="offers" type="checkbox" name="updates" checked>Latest offers 
+					</label><br>
+					
+					<strong>Email ID:</strong> <input id="email" type = "text" placeholder = "your email here" required>
+					<button type = "submit">Submit</button>
+				</form>
+			</div>
+		</div>
+		
+		<br>
+		
+		<div id="back-to-top"><a href = #header>⇡</a></div>
+		
+		<br>
+		
+		<footer>&copy; swagatamHeroz <s>2021</s> 2022</footer>
+	</body>
+</html>	
